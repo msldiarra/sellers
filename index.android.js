@@ -11,12 +11,21 @@ import React, {
   View
 } from 'react-native';
 
+import LocalizedStrings from 'react-native-localization';
+
+let strings = new LocalizedStrings({
+  en:{ defaultContactSearchTerm: "Start entring a contact name" },
+  fr:{ defaultContactSearchTerm: "Commencez Ã  tapez un nom" }
+  });
+
+strings.setLanguage('fr')
+
 class Sellers extends Component {
 
    constructor(props) {
        super(props);
        this.state = {
-         contactSearchText: 'Commencez à tapez un nom',
+         contactSearchText: strings.defaultContactSearchTerm,
        };
      }
 

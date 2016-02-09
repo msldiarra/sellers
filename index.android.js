@@ -31,8 +31,10 @@ class Sellers extends Component {
 
   render() {
     return (
-      <React.View>
-          <React.TextInput value={this.state.contactSearchText} />
+      <React.View style={styles.container}>
+          <React.TextInput
+            value={this.state.contactSearchText}
+            />
       </React.View>
     );
   }
@@ -41,9 +43,8 @@ class Sellers extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#fff'
   },
   welcome: {
     fontSize: 20,

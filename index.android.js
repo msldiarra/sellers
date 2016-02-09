@@ -12,6 +12,8 @@ import React, {
 } from 'react-native';
 
 import LocalizedStrings from 'react-native-localization';
+import MK from 'react-native-material-kit';
+const { MKTextField, MKColor } = MK;
 
 let strings = new LocalizedStrings({
   en:{ defaultContactSearchTerm: "Start entring a contact name" },
@@ -32,9 +34,11 @@ class Sellers extends Component {
   render() {
     return (
       <React.View style={styles.container}>
-          <React.TextInput
-            value={this.state.contactSearchText}
-            />
+          <MKTextField
+            tintColor={MKColor.Lime}
+            textInputStyle={{color: MKColor.Orange}}
+            placeholder={this.state.contactSearchText}
+            style={styles.textfield}/>
       </React.View>
     );
   }
@@ -43,13 +47,15 @@ class Sellers extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  textfield: {
+      flex: 1,
+      alignSelf: 'flex-start',
+      paddingLeft: 10,
+      paddingRight: 10
   },
   instructions: {
     textAlign: 'center',

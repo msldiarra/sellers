@@ -1,5 +1,6 @@
 rootProject.name = 'Sellers'
 
-include ':ReactNativeLocalization',':app'
+include ':RNMaterialKit',':ReactNativeLocalization',':app'
 
 project(':ReactNativeLocalization').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-localization/android')
+project(':RNMaterialKit').projectDir = file('../node_modules/react-native-material-kit/android')

@@ -8,11 +8,12 @@ import React, {
   Component,
   StyleSheet,
   Text,
+  Image,
   View
 } from 'react-native';
 
 import LocalizedStrings from 'react-native-localization';
-import { List} from 'react-native-material-design';
+import { List, Avatar, Icon} from 'react-native-material-design';
 import MK from 'react-native-material-kit';
 const { MKTextField, MKColor } = MK;
 
@@ -33,6 +34,9 @@ class Sellers extends Component {
      }
 
   render() {
+
+    let avatar = <Avatar icon={"person"} />
+
     return (
       <React.View style={styles.mainContainer}>
 
@@ -50,12 +54,15 @@ class Sellers extends Component {
                       secondaryText="Dernière commande : 20 Avril 2015"
                       captionText="30€"
                       primaryColor="blue"
+                      leftAvatar={avatar}
                       />
+
                 <List style={styles.contact}
                       primaryText="Awa Thiam"
                       secondaryText="Dernière commande : ~ 3mois"
                       captionText="150€"
                       primaryColor="blue"
+                      leftAvatar={avatar}
                       />
           </React.View>
 

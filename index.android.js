@@ -40,11 +40,10 @@ class Sellers extends Component {
 
     return (
       <React.ScrollView style={styles.mainContainer}>
-
           <React.View style={styles.searchContainer}>
               <MKTextField
-                tintColor={MKColor.Lime}
-                textInputStyle={{color: MKColor.Orange}}
+                tintColor={"#4CAF50"}
+                textInputStyle={{color: "#212121"}}
                 placeholder={this.state.contactSearchText}
                 style={styles.textfield}/>
           </React.View>
@@ -54,14 +53,14 @@ class Sellers extends Component {
                       primaryText="Awa Sissoko"
                       secondaryText="Dernière commande : 20 Avril 2015"
                       captionText="30€"
-                      primaryColor="blue"
+                      primaryColor="#212121"
                       leftAvatar={avatar}
                       />
                 <List style={styles.contact}
                       primaryText="Awa Thiam"
                       secondaryText="Dernière commande : ~ 3mois"
                       captionText="150€"
-                      primaryColor="blue"
+                      primaryColor="#212121"
                       leftAvatar={avatar}
                       />
           </React.View>
@@ -99,6 +98,9 @@ const styles = StyleSheet.create({
       paddingLeft: 10,
       paddingRight: 10
   },
+  captionText: {
+      color: "#388E3C"
+  }
 });
 
 AppRegistry.registerComponent('Sellers', () => Sellers);

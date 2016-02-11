@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       backgroundColor: '#fff',
-      marginBottom: 25
+      height: 50
   },
   listContainer: {
         flex:1,
@@ -90,7 +90,6 @@ const styles = StyleSheet.create({
   },
   textfield: {
       flex: 1,
-      alignSelf: 'flex-start',
       paddingLeft: 10,
       paddingRight: 10
   },

@@ -9,7 +9,8 @@ import React, {
   StyleSheet,
   Text,
   Image,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
 import LocalizedStrings from 'react-native-localization';
@@ -38,7 +39,7 @@ class Sellers extends Component {
     let avatar = <Avatar icon={"person"} />
 
     return (
-      <React.View style={styles.mainContainer}>
+      <React.ScrollView style={styles.mainContainer}>
 
           <React.View style={styles.searchContainer}>
               <MKTextField
@@ -56,7 +57,6 @@ class Sellers extends Component {
                       primaryColor="blue"
                       leftAvatar={avatar}
                       />
-
                 <List style={styles.contact}
                       primaryText="Awa Thiam"
                       secondaryText="Dernière commande : ~ 3mois"
@@ -66,7 +66,7 @@ class Sellers extends Component {
                       />
           </React.View>
 
-      </React.View>
+      </React.ScrollView>
     );
   }
 }
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
       marginBottom: 25
   },
   listContainer: {
+        flex:1,
         flexDirection: 'column',
         backgroundColor: '#fff'
   },
